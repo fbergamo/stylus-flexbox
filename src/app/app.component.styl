@@ -1,0 +1,63 @@
+box1-color = #c6e3e3
+box1-color2 = #93aaaa
+box1-color3 = #545e5e
+box2-color = beige
+box2-color2 = #919183
+box2-color3 = #4e4e49
+box3-color = darkseagreen
+box3-color2 = #587158
+box3-color3 = #384438
+title-container-color = mistyrose
+title-container-color2 = #917d7d
+css-prop-color = #3f3f3f
+
+#page-title
+  font-size 400%
+
+.container
+  margin-bottom 30px
+
+#title-container
+  @extends .container
+  background-color title-container-color
+  border-top 6px solid title-container-color2
+  border-bottom 6px solid black
+
+#text-div-title-span
+  color title-container-color2
+
+#prop-container
+  @extends .container
+
+.text-div
+  text-align center
+  margin auto
+  color css-prop-color
+
+.box
+  width 200px
+  height 200px
+  padding 10px
+  margin auto
+  border solid 5px black
+  text-align center
+
+
+#box1
+  @extends .box
+  background-color box1-color
+  border solid 5px box1-color2
+  color box1-color3
+
+#box2
+  @extends .box
+  background-color box2-color
+  border solid 5px box2-color2
+  color box2-color3
+
+#box3
+  @extends .box
+  background-color box3-color
+  border solid 5px box3-color2
+  color box3-color3
+

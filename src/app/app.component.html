@@ -1,3 +1,44 @@
-<h1>
-  {{title}}
-</h1>
+<div id="title-container">
+  <div class="text-div">
+    <h1 id="page-title">STYLUS <span id="text-div-title-span">+</span> FLEXBOX</h1>
+  </div>
+</div>
+
+<div class="container" *ngIf="flexProp"
+     [style.display]="flexProp.display"
+     [style.flex-direction]="flexProp.flexDirections"
+     [style.align-items]="flexProp.alignItems">
+
+  <div id="box1">
+    <h1>Hi! I'm a box</h1>
+    <h2>BOX1</h2>
+  </div>
+  <div id="box2">
+    <h1>I'm another box</h1>
+    <h2>BOX2</h2>
+  </div>
+  <div id="box3">
+    <h1>I'm a box too!</h1>
+    <h2>BOX3</h2>
+  </div>
+</div>
+
+<div id="prop-container">
+  <div class="text-div">
+    <div>
+      <h2>
+        display:
+        <i>{{"\'"}}{{flexProp.display}}{{"\';"}}</i>
+      </h2>
+      <h2>
+        flex-direction:
+        <i>{{"\'"}}{{flexProp.flexDirections}}{{"\';"}}</i>
+      </h2>
+      <h2>
+        align-items:
+        <i>{{"\'"}}{{flexProp.alignItems}}{{"\';"}}</i>
+      </h2>
+    </div>
+  </div>
+</div>
+
