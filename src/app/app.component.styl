@@ -10,18 +10,37 @@ box3-color3 = #384438
 title-container-color = mistyrose
 title-container-color2 = #917d7d
 css-prop-color = #3f3f3f
+buttons-color1 = #cdcdcd
+buttons-color2 = #6b6b6b
 
 #page-title
   font-size 400%
 
+
+
+.page-div
+  width 60%
+  margin 0 auto
+
 .container
   margin-bottom 30px
+
+.button-1
+  color:buttons-color1
+  background-color buttons-color2
+
+
+.button-1-inv
+  color:buttons-color2
+  background-color buttons-color1
+
+
 
 #title-container
   @extends .container
   background-color title-container-color
   border-top 6px solid title-container-color2
-  border-bottom 6px solid black
+  border-bottom 5px solid css-prop-color
 
 #text-div-title-span
   color title-container-color2
@@ -38,7 +57,6 @@ css-prop-color = #3f3f3f
   width 200px
   height 200px
   padding 10px
-  margin auto
   border solid 5px black
   text-align center
 
@@ -54,10 +72,15 @@ css-prop-color = #3f3f3f
   background-color box2-color
   border solid 5px box2-color2
   color box2-color3
+  width: 380px
+  height 150px
+
 
 #box3
   @extends .box
   background-color box3-color
   border solid 5px box3-color2
   color box3-color3
+  width: 150px
+  height 380px
 

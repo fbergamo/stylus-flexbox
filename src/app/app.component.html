@@ -4,41 +4,67 @@
   </div>
 </div>
 
-<div class="container" *ngIf="flexProp"
-     [style.display]="flexProp.display"
-     [style.flex-direction]="flexProp.flexDirections"
-     [style.align-items]="flexProp.alignItems">
+<div class="page-div">
+  <div class="container" *ngIf="flexProp"
+       [style.display]="flexProp.display"
+       [style.flex-direction]="flexProp.flexDirections"
+       [style.align-items]="flexProp.alignItems"
+       [style.flex-wrap]="flexProp.flexWrap"
+  >
 
-  <div id="box1">
-    <h1>Hi! I'm a box</h1>
-    <h2>BOX1</h2>
+    <div id="box1">
+      <h1>Hi! I'm a box</h1>
+      <h2>BOX1</h2>
+    </div>
+    <div id="box2">
+      <h1>I'm another box</h1>
+      <h2>BOX2</h2>
+    </div>
+    <div id="box3">
+      <h1>I'm a box too!</h1>
+      <h2>BOX3</h2>
+    </div>
   </div>
-  <div id="box2">
-    <h1>I'm another box</h1>
-    <h2>BOX2</h2>
-  </div>
-  <div id="box3">
-    <h1>I'm a box too!</h1>
-    <h2>BOX3</h2>
-  </div>
-</div>
 
-<div id="prop-container">
-  <div class="text-div">
-    <div>
-      <h2>
-        display:
-        <i>{{"\'"}}{{flexProp.display}}{{"\';"}}</i>
-      </h2>
-      <h2>
-        flex-direction:
-        <i>{{"\'"}}{{flexProp.flexDirections}}{{"\';"}}</i>
-      </h2>
-      <h2>
-        align-items:
-        <i>{{"\'"}}{{flexProp.alignItems}}{{"\';"}}</i>
-      </h2>
+  <div id="prop-container">
+    <div class="text-div">
+      <div>
+        <h2>
+          display:
+          <i>{{"\'"}}{{flexProp.display}}{{"\';"}}</i>
+        </h2>
+        <h2>
+          flex-direction:
+          <i>{{"\'"}}{{flexProp.flexDirections}}{{"\';"}}</i>
+        </h2>
+        <div>
+          <button (click)="setDirections('row')" [class]="flexProp.flexDirections=='row'?'button-1':'button-1-inv'">row</button>
+          <button (click)="setDirections('row-reverse')" [class]="flexProp.flexDirections=='row-reverse'?'button-1':'button-1-inv'">row-reverse</button>
+          <button (click)="setDirections('column')" [class]="flexProp.flexDirections=='column'?'button-1':'button-1-inv'">column</button>
+          <button (click)="setDirections('column-reverse')" [class]="flexProp.flexDirections=='column-reverse'?'button-1':'button-1-inv'">column-reverse</button>
+        </div>
+        <div>
+          <h2>
+            align-items:
+            <i>{{"\'"}}{{flexProp.alignItems}}{{"\';"}}</i>
+          </h2>
+          <button (click)="setAlign('center')" [class]="flexProp.alignItems=='center'?'button-1':'button-1-inv'">center</button>
+          <button (click)="setAlign('flex-start')" [class]="flexProp.alignItems=='flex-start'?'button-1':'button-1-inv'">flex-start</button>
+          <button (click)="setAlign('flex-end')" [class]="flexProp.alignItems=='flex-end'?'button-1':'button-1-inv'">flex-end</button>
+          <button (click)="setAlign('baseline')" [class]="flexProp.alignItems=='baseline'?'button-1':'button-1-inv'">baseline</button>
+          <button (click)="setAlign('stretch')" [class]="flexProp.alignItems=='stretch'?'button-1':'button-1-inv'">stretch</button>
+
+        </div>
+        <div>
+          <h2>
+            flex-wrap:
+            <i>{{"\'"}}{{flexProp.flexWrap}}{{"\';"}}</i>
+          </h2>
+          <button (click)="setWrap('nowrap')" [class]="flexProp.flexWrap=='nowrap'?'button-1':'button-1-inv'">nowrap</button>
+          <button (click)="setWrap('wrap')" [class]="flexProp.flexWrap=='wrap'?'button-1':'button-1-inv'">wrap</button>
+          <button (click)="setWrap('wrap-reverse')" [class]="flexProp.flexWrap=='wrap-reverse'?'button-1':'button-1-inv'">wrap-reverse</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-

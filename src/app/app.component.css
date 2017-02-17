@@ -1,15 +1,27 @@
 #page-title {
   font-size: 400%;
 }
+.page-div {
+  width: 60%;
+  margin: 0 auto;
+}
 .container,
 #title-container,
 #prop-container {
   margin-bottom: 30px;
 }
+.button-1 {
+  color: #cdcdcd;
+  background-color: #6b6b6b;
+}
+.button-1-inv {
+  color: #6b6b6b;
+  background-color: #cdcdcd;
+}
 #title-container {
   background-color: #ffe4e1;
   border-top: 6px solid #917d7d;
-  border-bottom: 6px solid #000;
+  border-bottom: 5px solid #3f3f3f;
 }
 #text-div-title-span {
   color: #917d7d;
@@ -26,7 +38,6 @@
   width: 200px;
   height: 200px;
   padding: 10px;
-  margin: auto;
   border: solid 5px #000;
   text-align: center;
 }
@@ -39,9 +50,13 @@
   background-color: #f5f5dc;
   border: solid 5px #919183;
   color: #4e4e49;
+  width: 380px;
+  height: 150px;
 }
 #box3 {
   background-color: #8fbc8f;
   border: solid 5px #587158;
   color: #384438;
+  width: 150px;
+  height: 380px;
 }

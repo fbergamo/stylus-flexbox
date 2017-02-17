@@ -13,12 +13,22 @@ export class AppComponent implements OnInit{
    this.flexProp = {
      display : 'flex',
      flexDirections : 'row',
-     alignItems : 'center'
+     alignItems : 'center',
+     flexWrap: 'nowrap'
    }
   }
 
+  setDirections(dir:string){
+    this.flexProp.flexDirections = dir;
+  }
 
+  setWrap(wrap:string){
+    this.flexProp.flexWrap = wrap;
+  }
 
+  setAlign(align:string){
+    this.flexProp.alignItems = align;
+  }
 }
 
 
@@ -26,4 +36,5 @@ export interface FlexProperties{
   display:string;
   flexDirections:string;
   alignItems:string;
+  flexWrap:string;
 }

@@ -1,6 +1,25 @@
 body-background = #e8e8e8
 roboto-font = 'Roboto Condensed', sans-serif
 
+border-radius(val)
+  -moz-border-radius: val
+  -webkit-border-radius: val
+  border-radius:val;
+
+
 body
   background-color body-background
   font-family roboto-font
+
+
+button
+  font-family roboto-font
+  border-radius(5px)
+  font-size: 20px
+  text-decoration: none
+  cursor: pointer
+  border:none
+
+button:focus
+  outline 0
+
